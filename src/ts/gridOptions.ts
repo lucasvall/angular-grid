@@ -51,6 +51,9 @@ module awk.grid {
         afterSortChanged?(): void;
         virtualRowRemoved?(row: any, rowIndex: number): void;
         rowClicked?(params: any): void;
+        columnResized?():void;
+        columnVisibilityChanged?():void;
+        columnOrderChanged?():void;
         datasource?: any; // should be typed
         ready?(api: any): void; // should be typed
         rowBuffer?: number;
@@ -69,6 +72,8 @@ module awk.grid {
         headerHeight?: number;
         pinnedColumnCount?: number;
         localeText?: any;
+        isScrollLag?(): boolean;
+        suppressScrollLag?(): boolean;
     }
 
 }
